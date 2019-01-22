@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script>L_PREFER_CANVAS=false; L_NO_TOUCH=false; L_DISABLE_3D=false;</script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.3.4/dist/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.3.4/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+    <meta name="viewport" content="width=device-width,
+        initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <style>#map_510986ba7666470eb14d36f78f864447 {
+        position: relative;
+        width: 100.0%;
+        height: 100.0%;
+        left: 0.0%;
+        top: 0.0%;
+        }
+    </style>
+</head>
+<body>    
+    
+    <div class="folium-map" id="map_510986ba7666470eb14d36f78f864447" ></div>
+</body>
+<script>    
+    
+    
+        var bounds = null;
+    
+
+    var map_510986ba7666470eb14d36f78f864447 = L.map(
+        'map_510986ba7666470eb14d36f78f864447', {
+        center: [40.735179, -73.988025],
+        zoom: 5,
+        maxBounds: bounds,
+        layers: [],
+        worldCopyJump: false,
+        crs: L.CRS.EPSG3857,
+        zoomControl: true,
+        });
+
+    
+    
+    var tile_layer_a886b6442d374dbaa2a5d34ba67bbbe8 = L.tileLayer(
+        'https://{s}.tiles.mapbox.com/v3/mapbox.world-bright/{z}/{x}/{y}.png',
+        {
+        "attribution": null,
+        "detectRetina": false,
+        "maxNativeZoom": 18,
+        "maxZoom": 18,
+        "minZoom": 0,
+        "noWrap": false,
+        "opacity": 1,
+        "subdomains": "abc",
+        "tms": false
+}).addTo(map_510986ba7666470eb14d36f78f864447);
+    
+        var marker_cff0ed90d3f34075bf47e9e3b7c42460 = L.marker(
+            [40.735179, -73.988025],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(map_510986ba7666470eb14d36f78f864447);
+        
+    
+            var popup_c27ac16a42024a628d7ca76ef8de556c = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_dbca53fd12cb41fcaedd13c60847603e = $(`<div id="html_dbca53fd12cb41fcaedd13c60847603e" style="width: 100.0%; height: 100.0%;">Shawn Your Here</div>`)[0];
+                popup_c27ac16a42024a628d7ca76ef8de556c.setContent(html_dbca53fd12cb41fcaedd13c60847603e);
+            
+
+            marker_cff0ed90d3f34075bf47e9e3b7c42460.bindPopup(popup_c27ac16a42024a628d7ca76ef8de556c)
+            ;
+
+            
+        
+    
+            var feature_group_62d73fd7b5734dfdba7d137c9b87c87c = L.featureGroup(
+                ).addTo(map_510986ba7666470eb14d36f78f864447);
+        
+    
+        var marker_0a9ac755fe594717b9ae141e2ea77a17 = L.marker(
+            [40.74844, -73.985664],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(feature_group_62d73fd7b5734dfdba7d137c9b87c87c);
+        
+    
+            var popup_870c29448ce949a49e9f197b62485d47 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_5018127134dc42d986c71b62d9d955f8 = $(`<div id="html_5018127134dc42d986c71b62d9d955f8" style="width: 100.0%; height: 100.0%;">Empire State building</div>`)[0];
+                popup_870c29448ce949a49e9f197b62485d47.setContent(html_5018127134dc42d986c71b62d9d955f8);
+            
+
+            marker_0a9ac755fe594717b9ae141e2ea77a17.bindPopup(popup_870c29448ce949a49e9f197b62485d47)
+            ;
+
+            
+        
+    
+        var marker_6a89699b574545ceab4e2c469cdec1df = L.marker(
+            [40.713005, -74.013184],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(feature_group_62d73fd7b5734dfdba7d137c9b87c87c);
+        
+    
+            var popup_ed3659a0dadc4710a1a4c75ca06499e3 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_96b6ef1bc79d417a97d98be9fa06f14e = $(`<div id="html_96b6ef1bc79d417a97d98be9fa06f14e" style="width: 100.0%; height: 100.0%;">One World Trade</div>`)[0];
+                popup_ed3659a0dadc4710a1a4c75ca06499e3.setContent(html_96b6ef1bc79d417a97d98be9fa06f14e);
+            
+
+            marker_6a89699b574545ceab4e2c469cdec1df.bindPopup(popup_ed3659a0dadc4710a1a4c75ca06499e3)
+            ;
+
+            
+        
+</script>
