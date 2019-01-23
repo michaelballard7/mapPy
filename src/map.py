@@ -5,7 +5,7 @@ import pandas as pd, io
 map = folium.Map(location=[40.735179, -73.988025], zoom_start=5, tiles="Mapbox Bright")
 
 # I can add individual child objects on my map object
-map.add_child(folium.Marker(location=[40.735179, -73.988025], popup="Shawn Your Here"))
+map.add_child(folium.Marker(location=[40.625710, -73.929550], popup="Britz Your Here"))
 
 # another way to pass objects to a map is a feature group which is more like component based
 fg = folium.FeatureGroup(name="map1")
