@@ -1,5 +1,5 @@
 import folium
-import pandas as pd 
+import pandas as pd, io  
 
 # I can create a map object as such:
 map = folium.Map(location=[40.735179, -73.988025], zoom_start=5, tiles="Mapbox Bright")
@@ -30,9 +30,12 @@ def color_producer(elevation):
 
 # add multiple children from a structured pandas dataset
 for lt, ln, el in zip(lat, lon, elev):
-    fg.add_child(folium.CircleMarker(location=[lt,ln], radius=6, popup=str(el)+"M elevation", fill_color=color_producer(el), color='grey', fill_opacity=0.7))
+    # add a child using circle markers pads
+    fg.add_child(folium.CircleMarker(location=[lt,ln], radius=6, popup=str(el)+"Meter", fill_color=color_producer(el), color = 'grey', fill_opacity=0.7))
 
-fg.add_child(folium.GeoJson(data=open('../data/world.json','r', encoding='utf-8-sig').read()))
-# add components to the map as one child
+fg.add_child(folium.GeoJson(data=open('world.json', 'r', encoding='utf-8-sig').read(),
+                             style_function=lambda x: {'fillColor': 'green' if x['properties']['POP2005'] < 10000000
+                                                       else 'orange' if 10000000 <= x['properties']['POP2005'] < 20000000 else 'red'}))
+
 map.add_child(fg)
 map.save("map2.html")
