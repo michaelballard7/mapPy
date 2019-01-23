@@ -13,14 +13,26 @@ fg = folium.FeatureGroup(name="map1")
 fg.add_child(folium.Marker(location=[40.748440, -73.985664], popup="Empire State building"))
 fg.add_child(folium.Marker(location=[40.713005, -74.013184], popup="One World Trade"))
 
-# add components to the map as one child
-map.add_child(fg)
-
 # import pandas volcanoe data and prepare to add to the map
 data = pd.read_csv("../data/Volcanoes.txt")
 lat = list(data["LAT"])
 lon = list(data["LON"])
+elev = list(data["ELEV"])
 
-print(lat)
-print("-----")
-print(lon)
+# a function to determine the color of a map marker:
+def color_producer(elevation):
+    if elevation < 1000:
+        return 'green'
+    elif 1000 <= elevation < 3000:
+        return 'orange'
+    else:
+        return 'red'
+
+# add multiple children from a structured pandas dataset
+for lt, ln, el in zip(lat, lon, elev):
+    fg.add_child(folium.CircleMarker(location=[lt,ln], radius=6, popup=str(el)+"M elevation", fill_color=color_producer(el), color='grey', fill_opacity=0.7))
+
+fg.add_child(folium.GeoJson(data=open('../data/world.json','r', encoding='utf-8-sig').read()))
+# add components to the map as one child
+map.add_child(fg)
+map.save("map2.html")
